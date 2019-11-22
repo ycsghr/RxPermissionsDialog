@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<item name="permissions_allow_btn" type="id"/>
+    <item name="permissions_refused_btn" type="id"/>
+    <item name="permissions_title" type="id"/>
+    <item name="permissions_content" type="id"/>
+
+</resources>
