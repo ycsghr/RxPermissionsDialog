@@ -57,6 +57,6 @@ public class YPermissions {
      * @param afterRefusingContent
      */
     public YPermissions(String permissionsName, String beforeContent, String afterRefusingContent) {
-        new YPermissions(permissionsName,beforeContent,afterRefusingContent,true);
+      this(permissionsName,beforeContent,afterRefusingContent,true);
     }
 }

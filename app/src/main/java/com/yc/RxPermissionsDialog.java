@@ -43,7 +43,7 @@ public class RxPermissionsDialog extends DialogFragment {
     private PermissionsListener listener;
     private View view;
     private boolean customClickEvent = false;
-    private RxPermissions rxPermissions = new RxPermissions(this);
+    private RxPermissions rxPermissions ;
     private String settingAllowBtnName = "去设置";
     private RunToSetting runToSetting;//跳转到设置页的方法觉得不好可以自定义
     private int layout = R.layout.rxpermissions_dialog;
@@ -229,6 +229,7 @@ public class RxPermissionsDialog extends DialogFragment {
      */
     public void showDialog(FragmentActivity activity) {
         this.activity = activity;
+        rxPermissions=new RxPermissions(activity);
         if (hasMustPermissions()) {
             show(activity.getSupportFragmentManager(), "permissionsDialog");
             return;
@@ -246,9 +247,9 @@ public class RxPermissionsDialog extends DialogFragment {
      * @return
      */
     private boolean hasMustPermissions() {
-        for (YPermissions permissions : permissions) {
+        for (YPermissions perm : permissions) {
             if (PackageManager.PERMISSION_GRANTED != ContextCompat
-                    .checkSelfPermission(activity, permissions.getPermissionsName())) {
+                    .checkSelfPermission(activity, perm.getPermissionsName())) {
                 return true;
             }
         }
