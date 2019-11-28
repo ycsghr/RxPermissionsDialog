@@ -1,8 +1,4 @@
-package com.yc.rxpermissionsdialog;
-
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
+package com.yc.permissionsdialog;
 
 /**
  * @author yangchao

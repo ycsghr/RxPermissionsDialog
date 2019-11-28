@@ -1,4 +1,4 @@
-package com.yc;
+package com.yc.permissionsdialog;
 
 
 import android.content.Intent;
@@ -19,10 +19,6 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
-import com.yc.rxpermissionsdialog.PermissionsListener;
-import com.yc.rxpermissionsdialog.R;
-import com.yc.rxpermissionsdialog.RunToSetting;
-import com.yc.rxpermissionsdialog.YPermissions;
 import io.reactivex.functions.BiConsumer;
 import io.reactivex.functions.Consumer;
 
@@ -86,8 +82,7 @@ public class RxPermissionsDialog extends DialogFragment {
                         intent.setData(Uri.fromParts("package",activity.getPackageName(), null));
                     } else if (Build.VERSION.SDK_INT <= 8) {
                         intent.setAction(Intent.ACTION_VIEW);
-                        intent
-                                .setClassName("com.android.settings", "com.android.settings.InstalledAppDetails");
+                        intent.setClassName("com.android.settings", "com.android.settings.InstalledAppDetails");
                         intent.putExtra("com.android.settings.ApplicationPkgName",
                                 activity.getPackageName());
                     }
@@ -185,6 +180,7 @@ public class RxPermissionsDialog extends DialogFragment {
 
             }
         });
+
     }
 
     private void setRightBtn(String btnName) {

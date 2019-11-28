@@ -1,4 +1,4 @@
-package com.yc.rxpermissionsdialog;
+package com.yc.permissionsdialog;
 
 import android.view.View;
 

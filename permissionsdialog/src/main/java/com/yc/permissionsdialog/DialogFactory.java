@@ -1,6 +1,4 @@
-package com.yc.rxpermissionsdialog;
-
-import com.yc.RxPermissionsDialog;
+package com.yc.permissionsdialog;
 
 /**
  * @author yangchao
